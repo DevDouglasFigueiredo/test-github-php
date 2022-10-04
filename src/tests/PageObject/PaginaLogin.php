@@ -16,7 +16,7 @@ class PaginaLogin
         $this->driver = $driver;
     }
 
-    public function realizarLoginCom(string $email, string $senha): void
+    public function realizarLoginCom(string $email, string $senha)
     {
         $this->driver->get('https://github.com/login');
 
@@ -25,6 +25,10 @@ class PaginaLogin
 
         $inputPassword = WebDriverBy::id('password');
         $this->driver->findElement($inputPassword)->sendKeys($senha);
+
+
+        
+      
 
     }
 }

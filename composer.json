@@ -7,7 +7,9 @@
     },
     "autoload-dev": {
         "classmap": [
-            "src/tests/PageObject/PaginaLogin.php"
+            "src/tests/PageObject/PaginaLogin.php",
+            "src/tests/PageObject/PaginaPesquisa.php"
+
         ]
         
     }

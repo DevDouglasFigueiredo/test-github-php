@@ -20,7 +20,6 @@ class ComposerStaticInit0138da771b7b8181c5a8b52109cfd769
             'Symfony\\Polyfill\\Php80\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\Process\\' => 26,
-            'Src\\tests\\PageObject\\' => 21,
         ),
         'P' => 
         array (
@@ -49,10 +48,6 @@ class ComposerStaticInit0138da771b7b8181c5a8b52109cfd769
         'Symfony\\Component\\Process\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/process',
-        ),
-        'Src\\tests\\PageObject\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/tests',
         ),
         'PhpParser\\' => 
         array (
@@ -694,6 +689,7 @@ class ComposerStaticInit0138da771b7b8181c5a8b52109cfd769
         'SebastianBergmann\\Type\\VoidType' => __DIR__ . '/..' . '/sebastian/type/src/type/VoidType.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
         'Src\\tests\\PageObject\\PaginaLogin' => __DIR__ . '/../..' . '/src/tests/PageObject/PaginaLogin.php',
+        'Src\\tests\\PageObject\\PaginaPesquisa' => __DIR__ . '/../..' . '/src/tests/PageObject/PaginaPesquisa.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'TheSeer\\Tokenizer\\Exception' => __DIR__ . '/..' . '/theseer/tokenizer/src/Exception.php',
         'TheSeer\\Tokenizer\\NamespaceUri' => __DIR__ . '/..' . '/theseer/tokenizer/src/NamespaceUri.php',
