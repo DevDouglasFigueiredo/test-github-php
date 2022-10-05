@@ -22,9 +22,7 @@ class loginTest extends TestCase
     $capabilities = DesiredCapabilities::chrome();
     self::$driver = RemoteWebDriver::create($host, $capabilities);
 
-    
   }
-
 
   protected function setUp(): void // metodo para executar essa operação em todos os testes, para nao precisar de repetição de codigo 
   {
@@ -46,14 +44,6 @@ class loginTest extends TestCase
     $this->assertSame('https://github.com/', self::$driver->getCurrentURL());
     self::$driver->findElement(WebDriverBy::id('feed-original'))->getText();
 
-  }
-
-  public function testRealizarPesquisa()
-  {
-    $paginaPesquisa = new PaginaPesquisa(self::$driver);
-    $paginaPesquisa-> realizarBusca('behat');
-
-    
   }
 
   public static function tearDownAfterClass(): void // metodo para fechamento do navegador

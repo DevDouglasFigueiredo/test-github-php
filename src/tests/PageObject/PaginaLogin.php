@@ -27,8 +27,6 @@ class PaginaLogin
         $this->driver->findElement($inputPassword)->sendKeys($senha);
 
 
-        
-      
 
     }
 }
