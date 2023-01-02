@@ -1,14 +1,15 @@
 <?php
 
+require "vendor/autoload.php";
+
 use PHPUnit\Framework\TestCase;
 use Facebook\WebDriver\WebDriver;
-use Facebook\WebDriver\WebDriverBy;
 use src\tests\PageObject\PaginaLogin;
-use src\tests\PageObject\PaginaPesquisa;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
+use src\tests\PageObject\PaginaLogout;
 
-class PesquisaTest extends TestCase
+class LogoutTest extends TestCase
 {
     private static WebDriver $driver;
 
@@ -27,12 +28,11 @@ class PesquisaTest extends TestCase
         $paginaLogin->clicarParaLogar();
     }
 
-    public function testRealizarPesquisa()
+    public function testEfetuandoLogout()
     {
-        $paginaPesquisa = new PaginaPesquisa(self::$driver);
-        $paginaPesquisa->realizarBusca("behat");
-        $paginaPesquisa->clicarParaPesquisar();
-        $this->assertSame('https://github.com/search?q=behat',self::$driver->getCurrentURL());
+        $paginaLogout = new PaginaLogout(self::$driver);
+        $paginaLogout->efetuarLogout();
+        $this->assertSame('https://github.com/', self::$driver->getCurrentURL());
     }
 
     public function tearDown(): void

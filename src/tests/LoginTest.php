@@ -29,7 +29,7 @@ class loginTest extends TestCase
 
     self::$driver->get('https://github.com/login');
     $paginaLogin = new PaginaLogin(self::$driver);
-    $paginaLogin->realizarLoginCom('', '');
+    $paginaLogin->realizarLoginCom('devdouglasfigueiredo@gmail.com', 'masterbuss01');
   }
 
   public function testAcessarTelaDeLogin()

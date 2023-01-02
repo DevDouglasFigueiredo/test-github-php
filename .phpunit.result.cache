@@ -1,0 +1,1 @@
+{"version":1,"defects":{"LoginTest::testAcessarTelaDeLogin":4,"PesquisaTest::testRealizarPesquisa":4,"LogoutTest::testEfetuandoLogout":4,"src\\tests\\LoginTest::testAcessarTelaDeLogin":4},"times":{"LoginTest::testAcessarTelaDeLogin":2.906,"PesquisaTest::testRealizarPesquisa":3.972,"LogoutTest::testEfetuandoLogout":4.929,"src\\tests\\LoginTest::testAcessarTelaDeLogin":2.885}}

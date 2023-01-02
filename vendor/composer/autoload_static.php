@@ -15,6 +15,10 @@ class ComposerStaticInit0138da771b7b8181c5a8b52109cfd769
     );
 
     public static $prefixLengthsPsr4 = array (
+        's' => 
+        array (
+            'src\\tests\\' => 10,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
@@ -37,6 +41,10 @@ class ComposerStaticInit0138da771b7b8181c5a8b52109cfd769
     );
 
     public static $prefixDirsPsr4 = array (
+        'src\\tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/tests',
+        ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
@@ -688,8 +696,6 @@ class ComposerStaticInit0138da771b7b8181c5a8b52109cfd769
         'SebastianBergmann\\Type\\UnknownType' => __DIR__ . '/..' . '/sebastian/type/src/type/UnknownType.php',
         'SebastianBergmann\\Type\\VoidType' => __DIR__ . '/..' . '/sebastian/type/src/type/VoidType.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
-        'Src\\tests\\PageObject\\PaginaLogin' => __DIR__ . '/../..' . '/src/tests/PageObject/PaginaLogin.php',
-        'Src\\tests\\PageObject\\PaginaPesquisa' => __DIR__ . '/../..' . '/src/tests/PageObject/PaginaPesquisa.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'TheSeer\\Tokenizer\\Exception' => __DIR__ . '/..' . '/theseer/tokenizer/src/Exception.php',
         'TheSeer\\Tokenizer\\NamespaceUri' => __DIR__ . '/..' . '/theseer/tokenizer/src/NamespaceUri.php',

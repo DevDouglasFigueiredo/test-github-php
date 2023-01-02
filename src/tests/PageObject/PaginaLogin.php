@@ -1,7 +1,6 @@
 <?php
 
-namespace Src\tests\PageObject;
-
+namespace src\tests\PageObject;
 
 use Facebook\WebDriver\WebDriver;
 use Facebook\WebDriver\WebDriverBy;
@@ -18,7 +17,7 @@ class PaginaLogin
 
     public function realizarLoginCom(string $email, string $senha)
     {
-        $this->driver->get('https://github.com/login');
+        // $this->driver->get('https://github.com/login');
 
         $inputEmail = WebDriverBy::id('login_field');
         $this->driver->findElement($inputEmail)->sendKeys($email);
@@ -26,7 +25,15 @@ class PaginaLogin
         $inputPassword = WebDriverBy::id('password');
         $this->driver->findElement($inputPassword)->sendKeys($senha);
 
+        $h1Locator = WebDriverBy::tagName('h1');
+        // $textoh1 = self::$driver->findElement($h1Locator)->getText();
+    }
 
+    public function clicarParaLogar()
+    {
+        $botaologin = WebDriverBy::className('js-sign-in-button');
+        $this->driver->findElement($botaologin)->click();
 
+        // $this->driver->findElement(WebDriverBy::id('feed-original'))->getText();
     }
 }
