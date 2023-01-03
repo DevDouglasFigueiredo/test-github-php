@@ -3,7 +3,7 @@
 use PHPUnit\Framework\TestCase;
 use Facebook\WebDriver\WebDriver;
 use src\tests\PageObject\PageLogin;
-use src\tests\PageObject\PaginaPesquisa;
+use src\tests\PageObject\PageSearch;
 use Facebook\WebDriver\Chrome\ChromeOptions;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
@@ -33,9 +33,9 @@ class PesquisaTest extends TestCase
 
     public function testDoASearch()
     {
-        $paginaPesquisa = new PaginaPesquisa(self::$driver);
-        $paginaPesquisa->toLookFor("behat");
-        $paginaPesquisa->clickToSearch();
+        $pageSearch = new PageSearch(self::$driver);
+        $pageSearch->toLookFor("behat");
+        $pageSearch->clickToSearch();
         $this->assertSame('https://github.com/search?q=behat',self::$driver->getCurrentURL());
     }
 

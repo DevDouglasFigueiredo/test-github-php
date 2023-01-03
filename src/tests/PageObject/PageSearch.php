@@ -9,7 +9,7 @@ use Facebook\WebDriver\WebDriverBy;
 use Facebook\WebDriver\WebDriverExpectedCondition;
 
 
-class PaginaPesquisa
+class PageSearch
 {
     private WebDriver $driver;
 
@@ -25,17 +25,17 @@ class PaginaPesquisa
         $this->driver->findElement($inputSearch)->sendKeys($name);
     }
 
-    public function clickToSearch()   
+    public function clickToSearch()
     {
         $clickSearch = WebDriverBy::cssSelector('#jump-to-suggestion-search-global > a > div.border.rounded-2.flex-shrink-0.color-bg-subtle.px-1.color-fg-muted.ml-1.f6.js-jump-to-badge-search > span.js-jump-to-badge-search-text-global');
 
         $this->driver->wait(10)->until(
-            WebDriverExpectedCondition::visibilityOfElementLocated($clickSearch));
+            WebDriverExpectedCondition::visibilityOfElementLocated($clickSearch)
+        );
 
         if (!$clickSearch) {
-             throw new Exception("Elemento não encontrado");
-                
-            }
+            throw new Exception("Elemento não encontrado");
+        }
 
         $this->driver->findElement($clickSearch)->click();
     }
