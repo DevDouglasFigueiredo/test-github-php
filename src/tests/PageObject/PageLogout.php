@@ -6,7 +6,7 @@ use Facebook\WebDriver\WebDriver;
 use Facebook\WebDriver\WebDriverBy;
 use Facebook\WebDriver\WebDriverExpectedCondition;
 
-class PaginaLogout
+class PageLogout
 {
     private WebDriver $driver;
 
@@ -15,10 +15,10 @@ class PaginaLogout
         $this->driver = $driver;
     }
 
-    public function efetuarLogout()
+    public function loggingOut()
     {
-        $buttonPerfil = WebDriverBy::cssSelector('body > div.logged-in.env-production.page-responsive.full-width > div.position-relative.js-header-wrapper > header > div.Header-item.position-relative.mr-0.d-none.d-md-flex > details > summary');
-        $this->driver->findElement($buttonPerfil)->click();
+        $buttonProfile = WebDriverBy::cssSelector('body > div.logged-in.env-production.page-responsive.full-width > div.position-relative.js-header-wrapper > header > div.Header-item.position-relative.mr-0.d-none.d-md-flex > details > summary');
+        $this->driver->findElement($buttonProfile)->click();
 
         
         $buttonSignOut = WebDriverBy::cssSelector("body > div.logged-in.env-production.page-responsive.full-width > div.position-relative.js-header-wrapper > header > div.Header-item.position-relative.mr-0.d-none.d-md-flex > details > details-menu > form > button");

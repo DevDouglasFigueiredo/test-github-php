@@ -1,17 +1,14 @@
 <?php
 
 
-require 'vendor/autoload.php';
 use PHPUnit\Framework\TestCase;
 use Facebook\WebDriver\WebDriver;
-use Facebook\WebDriver\WebDriverBy;
-use Src\tests\PageObject\PaginaLogin;
-use Src\tests\PageObject\PaginaPesquisa;
+use src\tests\PageObject\PageLogin;
+use Facebook\WebDriver\Chrome\ChromeOptions;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
 
-
-class loginTest extends TestCase
+class LoginTest extends TestCase
 {
 
   private static WebDriver $driver;
@@ -20,34 +17,31 @@ class loginTest extends TestCase
   {
     $host = 'http://localhost:4444/wd/hub';
     $capabilities = DesiredCapabilities::chrome();
+    // self::$driver = RemoteWebDriver::create($host, $capabilities);
+    $options = new ChromeOptions();
+    $options->addArguments(['headless']);
+    $capabilities->setCapability(ChromeOptions::CAPABILITY, $options);
     self::$driver = RemoteWebDriver::create($host, $capabilities);
-
   }
 
-  protected function setUp(): void // metodo para executar essa operação em todos os testes, para nao precisar de repetição de codigo 
+  protected function setUp(): void
   {
-
     self::$driver->get('https://github.com/login');
-    $paginaLogin = new PaginaLogin(self::$driver);
-    $paginaLogin->realizarLoginCom('devdouglasfigueiredo@gmail.com', 'masterbuss01');
   }
 
-  public function testAcessarTelaDeLogin()
+  public function testAcessLoginScreen()
   {
 
-    //asserts
-    $h1Locator = WebDriverBy::tagName('h1');
-    $textoh1 = self::$driver->findElement($h1Locator)->getText();
-    $this->assertSame('Sign in to GitHub', $textoh1);
-
-    self::$driver->findElement(WebDriverBy::className('js-sign-in-button'))->click();
+    $pageLogin = new PageLogin (self::$driver);
+    $pageLogin->loginWith('devdouglasfigueiredo@gmail.com', 'masterbuss01');
+    $pageLogin->clickToLogin();
     $this->assertSame('https://github.com/', self::$driver->getCurrentURL());
-    self::$driver->findElement(WebDriverBy::id('feed-original'))->getText();
-
+    // $this->assertStringContainsString('Top Repositories', self::$driver->getPageSource());
   }
 
-  public static function tearDownAfterClass(): void // metodo para fechamento do navegador
+  public function tearDown(): void
   {
     self::$driver->close();
   }
+
 }

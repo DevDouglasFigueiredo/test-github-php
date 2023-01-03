@@ -5,10 +5,9 @@
         colors="true">
     <testsuites>
         <testsuite name="Testes">
-            <!-- <directory>src/tests/LoginTest.php</directory> -->
-            <!-- <directory>src/tests/PesquisaTest.php</directory> -->
+            <directory>src/tests/LoginTest.php</directory>
+            <directory>src/tests/PesquisaTest.php</directory>
             <directory>src/tests/LogoutTest.php</directory>
-
         </testsuite>
     </testsuites>
 </phpunit>
