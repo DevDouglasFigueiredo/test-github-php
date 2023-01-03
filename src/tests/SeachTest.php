@@ -8,7 +8,7 @@ use Facebook\WebDriver\Chrome\ChromeOptions;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
 
-class PesquisaTest extends TestCase
+class SeachTest extends TestCase
 {
     private static WebDriver $driver;
 
