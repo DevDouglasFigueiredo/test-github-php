@@ -1,0 +1,8 @@
+Login
+ [x] Login with errors with data set "UsuarioInexistente"
+ [x] Login with errors with data set "loginComUsuarioInvalido"
+ [x] Login with errors with data set "loginComSenhaInvalida"
+ [x] Login with errors with data set "campoUsuarioVazio"
+ [x] Login with errors with data set "campoSenhaVazio"
+ [x] Login with sucess
+

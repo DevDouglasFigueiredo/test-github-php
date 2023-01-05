@@ -19,12 +19,12 @@ class PageLogin
     public function loginWith(string $email, string $password)
     {
         $inputEmail = WebDriverBy::id('login_field');
-        $this->driver->findElement($inputEmail)->sendKeys($email);
+        $this->driver->findElement($inputEmail)->sendKeys(['user' => $email]);
 
         $inputPassword = WebDriverBy::id('password');
-        $this->driver->findElement($inputPassword)->sendKeys($password);
+        $this->driver->findElement($inputPassword)->sendKeys(['pass' => $password]);
 
-    }
+    }   
 
     public function clickToLogin()
     {   
@@ -36,5 +36,6 @@ class PageLogin
         }
 
         $this->driver->findElement($buttonlogin)->click();
-    }
+        
+    }   
 }

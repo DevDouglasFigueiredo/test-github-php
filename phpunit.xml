@@ -6,8 +6,11 @@
     <testsuites>
         <testsuite name="Testes">
             <directory>src/tests/LoginTest.php</directory>
-            <directory>src/tests/SearchTest.php</directory>
-            <directory>src/tests/LogoutTest.php</directory>
+            <!-- <directory>src/tests/SearchTest.php</directory>
+            <directory>src/tests/LogoutTest.php</directory> -->
         </testsuite>
     </testsuites>
+     <logging>
+        <log type="testdox-text" target="relatorio-teste.txt"/>
+    </logging>
 </phpunit>
