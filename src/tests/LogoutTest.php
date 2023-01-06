@@ -33,6 +33,9 @@ class LogoutTest extends TestCase
         $pageLogin->clickToLogin();
     }
 
+    /**
+   * @logoutSucesso
+   */
     public function testLoggingOut()
     {
         $pageLogout = new PageLogout(self::$driver);

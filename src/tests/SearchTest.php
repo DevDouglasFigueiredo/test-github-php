@@ -31,6 +31,9 @@ class SearchTest extends TestCase
         $pageLogin->clickToLogin();
     }
 
+    /** 
+     * @pesquisa
+     * */
     public function testDoASearch()
     {
         $pageSearch = new PageSearch(self::$driver);

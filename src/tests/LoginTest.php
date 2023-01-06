@@ -47,6 +47,9 @@ class LoginTest extends TestCase
     $this->assertStringNotContainsString('Start coding instantly with GitHub Codespaces', self::$driver->getTitle());
   }
 
+  /**
+   * @loginSucesso
+   */
   public function testLoginWithSucess()
   {
     $this->pageLogin->loginWith("devdouglasfigueiredo@gmail.com", 'masterbuss01');
