@@ -52,7 +52,7 @@ class LoginTest extends TestCase
    */
   public function testLoginWithSucess()
   {
-    $this->pageLogin->loginWith("devdouglasfigueiredo@gmail.com", 'masterbuss01');
+    $this->pageLogin->loginWith("email-de-usuario@gmail.com", 'senha');
     $this->pageLogin->clickToLogin();
     $this->assertSame('https://github.com/', self::$driver->getCurrentURL());
 
